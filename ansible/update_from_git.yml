@@ -2,14 +2,17 @@
 # update to most recent version
 - name: update ansible
   hosts: localhost
+  roles:
+    - { role: qmailtoaster }
   tasks:
-
     - git:
         repo: "https://github.com/hightekvagabond/QBSWebServer.git"
         dest: /home/ubuntu/QBSWebServer
         update: yes
         version: master
 
+    - name: add git role
+      command: cd /home/ubuntu/QBSWebServer && ansible-galaxy install -r requirements.yml -p roles/
 
     - cron:
         name: "Cronjob Entry to update nightly"

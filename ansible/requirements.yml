@@ -1,0 +1,4 @@
+---
+ - name: qmailtoaster
+   src: https://github.com/angusmci/ansible-role-qmailtoaster
+   version: origin/master

@@ -5,7 +5,7 @@ MAINTAINER OMBU
 
 WORKDIR /root
 
-RUN apt-get -qq update && apt-get install -y build-essential \
+RUN apt-get -qq update && apt-get install --no-install-recommends -y build-essential \
     libssl-dev groff \
     && apt-get install vim -y \
     && apt-get install -y openssh-server \

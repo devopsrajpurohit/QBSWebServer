@@ -2,7 +2,7 @@ to run a playbook local:
 
 ansible-playbook --connection=local  repo.yml 
 
-
+ansible-galaxy install -r requirements.yml -p roles/
 
 we still need to run this manually on the server to start the cycle of auto updates:
 
